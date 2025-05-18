@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угрозы - Безопасность в интернете</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            background: #fff;
+            color: #111;
+        }
+        .sidebar {
+            min-height: 100vh;
+            background: #fff;
+            border-radius: 1.5rem;
+            box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+            padding: 2rem 1rem 2rem 1rem;
+            margin: 2rem 0 2rem 2rem;
+            width: 230px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .sidebar .sidebar-header {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: #111;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .sidebar .nav {
+            width: 100%;
+        }
+        .sidebar .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.08rem;
+            font-weight: 500;
+            color: #111;
+            border-radius: 1.2rem;
+            padding: 0.6rem 1rem;
+            margin-bottom: 0.2rem;
+            background: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        .sidebar .nav-link.active, .sidebar .nav-link:hover {
+            background: #111;
+            color: #fff !important;
+        }
+        .sidebar .nav-link i {
+            font-size: 1.15em;
+            color: #111;
+            transition: color 0.2s;
+        }
+        .sidebar .nav-link.active i, .sidebar .nav-link:hover i {
+            color: #fff;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        footer {
+            opacity:0.7;
+            font-size:1.05rem;
+            color: #111;
+        }
+        @media (max-width: 991px) {
+            .sidebar { position: static; width: 100%; margin: 0 0 2rem 0; border-radius: 1.2rem; }
+            .content { margin-left: 0; padding: 1.5rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-shield-alt"></i> КиберБезопасность
+        </div>
+        <nav class="nav flex-column">
+            <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Главная</a>
+            <a class="nav-link" href="rules.html"><i class="fas fa-list"></i> Правила</a>
+            <a class="nav-link active" href="threats.html"><i class="fas fa-exclamation-triangle"></i> Угрозы</a>
+            <a class="nav-link" href="protection.html"><i class="fas fa-shield-alt"></i> Защита</a>
+            <a class="nav-link" href="quiz.html"><i class="fas fa-question-circle"></i> Тест</a>
+            <a class="nav-link" href="resources.html"><i class="fas fa-book"></i> Ресурсы</a>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="container-fluid">
+            <h1 class="mt-4">Угрозы в интернете</h1>
+            <div class="threats-section">
+                <div class="threat-card mb-4">
+                    <div class="threat-icon"><i class="fas fa-virus"></i></div>
+                    <div class="threat-content">
+                        <h3>Вредоносные программы</h3>
+                        <p>Программы, созданные для нанесения вреда компьютеру или краже данных:</p>
+                        <ul>
+                            <li>Вирусы и черви</li>
+                            <li>Троянские программы</li>
+                            <li>Программы-вымогатели</li>
+                            <li>Шпионское ПО</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="threat-card mb-4">
+                    <div class="threat-icon"><i class="fas fa-fish"></i></div>
+                    <div class="threat-content">
+                        <h3>Фишинг</h3>
+                        <p>Попытки обмана с целью получения личных данных:</p>
+                        <ul>
+                            <li>Поддельные сайты</li>
+                            <li>Мошеннические письма</li>
+                            <li>Фальшивые уведомления</li>
+                            <li>Социальная инженерия</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="threat-card mb-4">
+                    <div class="threat-icon"><i class="fas fa-user-ninja"></i></div>
+                    <div class="threat-content">
+                        <h3>Кража личных данных</h3>
+                        <p>Незаконное получение и использование персональной информации:</p>
+                        <ul>
+                            <li>Кража паролей</li>
+                            <li>Взлом аккаунтов</li>
+                            <li>Кража банковских данных</li>
+                            <li>Подмена личности</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="threat-card mb-4">
+                    <div class="threat-icon"><i class="fas fa-bullhorn"></i></div>
+                    <div class="threat-content">
+                        <h3>Кибербуллинг</h3>
+                        <p>Травля и преследование в интернете:</p>
+                        <ul>
+                            <li>Оскорбления и угрозы</li>
+                            <li>Распространение ложной информации</li>
+                            <li>Публикация личных данных</li>
+                            <li>Групповая травля</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="threat-card mb-4">
+                    <div class="threat-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+                    <div class="threat-content">
+                        <h3>Интернет-мошенничество</h3>
+                        <p>Обман с целью получения финансовой выгоды:</p>
+                        <ul>
+                            <li>Фальшивые магазины</li>
+                            <li>Финансовые пирамиды</li>
+                            <li>Мошенничество с предоплатой</li>
+                            <li>Фальшивые выигрыши</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center mt-5 mb-3">
+        &copy; Клокова Полина, Фахретдинова Эвелина
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

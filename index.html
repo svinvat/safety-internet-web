@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Безопасность в интернете</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            background: #fff;
+            color: #111;
+        }
+        .sidebar {
+            min-height: 100vh;
+            background: #fff;
+            border-radius: 1.5rem;
+            box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+            padding: 2rem 1rem 2rem 1rem;
+            margin: 2rem 0 2rem 2rem;
+            width: 230px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .sidebar .sidebar-header {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: #111;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .sidebar .nav {
+            width: 100%;
+        }
+        .sidebar .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.08rem;
+            font-weight: 500;
+            color: #111;
+            border-radius: 1.2rem;
+            padding: 0.6rem 1rem;
+            margin-bottom: 0.2rem;
+            background: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        .sidebar .nav-link.active, .sidebar .nav-link:hover {
+            background: #111;
+            color: #fff !important;
+        }
+        .sidebar .nav-link i {
+            font-size: 1.15em;
+            color: #111;
+            transition: color 0.2s;
+        }
+        .sidebar .nav-link.active i, .sidebar .nav-link:hover i {
+            color: #fff;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 2.5rem 2rem 2rem 2rem;
+        }
+        .hero-block {
+            background: #fff;
+            border-radius: 1.5rem;
+            box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+            padding: 3rem 2rem 2.5rem 2rem;
+            text-align: center;
+        }
+        .hero-block h1 {
+            font-size:2.3rem;
+            font-weight:800;
+            color: #111;
+            margin-bottom: 1.1rem;
+        }
+        .hero-block p {
+            font-size:1.15rem;
+            color:#222;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+        .wow-btn {
+            border-radius:1.5rem;
+            font-size:1.1rem;
+            font-weight:700;
+            background: #111;
+            color: #fff;
+            border: none;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .wow-btn:hover {
+            background: #333;
+            color: #fff;
+            transform: scale(1.04);
+        }
+        .advantages .adv-card {
+            background:#fff;
+            border-radius:1.2rem;
+            box-shadow:0 2px 16px 0 rgba(0,0,0,0.07);
+            color: #111;
+        }
+        .advantages .adv-card i {
+            color: #111;
+        }
+        footer {
+            opacity:0.7;
+            font-size:1.05rem;
+            color: #111;
+        }
+        @media (max-width: 991px) {
+            .sidebar { position: static; width: 100%; margin: 0 0 2rem 0; border-radius: 1.2rem; }
+            .content { margin-left: 0; padding: 1.5rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-shield-alt text-primary"></i> КиберБезопасность
+        </div>
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="index.html"><i class="fas fa-home"></i> Главная</a>
+            <a class="nav-link" href="rules.html"><i class="fas fa-list"></i> Правила</a>
+            <a class="nav-link" href="threats.html"><i class="fas fa-exclamation-triangle"></i> Угрозы</a>
+            <a class="nav-link" href="protection.html"><i class="fas fa-shield-alt"></i> Защита</a>
+            <a class="nav-link" href="quiz.html"><i class="fas fa-question-circle"></i> Тест</a>
+            <a class="nav-link" href="resources.html"><i class="fas fa-book"></i> Ресурсы</a>
+        </nav>
+    </div>
+    <div class="content">
+        <!-- Hero-блок -->
+        <section class="hero-block mb-5">
+            <h1>Безопасность в интернете</h1>
+            <p>Научись защищать себя и свои данные в цифровом мире. Советы, правила, тесты и полезные ресурсы для школьников и их родителей.</p>
+            <a href="rules.html" class="btn btn-lg btn-primary px-5 py-3 shadow wow-btn">Начать &nbsp;<i class="fas fa-arrow-right"></i></a>
+        </section>
+        <!-- Преимущества -->
+        <section class="advantages mb-5">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="adv-card h-100 p-4 text-center">
+                        <div class="mb-3"><i class="fas fa-user-shield fa-2x text-primary"></i></div>
+                        <h4 class="fw-bold mb-2">Актуальные правила</h4>
+                        <p class="text-muted">Простые и понятные советы для безопасного поведения в интернете.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="adv-card h-100 p-4 text-center">
+                        <div class="mb-3"><i class="fas fa-bolt fa-2x text-warning"></i></div>
+                        <h4 class="fw-bold mb-2">Проверка знаний</h4>
+                        <p class="text-muted">Интерактивный тест поможет закрепить знания и выявить пробелы.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="adv-card h-100 p-4 text-center">
+                        <div class="mb-3"><i class="fas fa-link fa-2x text-info"></i></div>
+                        <h4 class="fw-bold mb-2">Полезные ресурсы</h4>
+                        <p class="text-muted">Собрание лучших сайтов, видео и телефонов доверия для детей и родителей.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="text-center mt-5 mb-3">
+            &copy; Клокова Полина, Фахретдинова Эвелина
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
